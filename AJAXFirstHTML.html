@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First AJAX</title>
+    <!-- Created by Rasmus laptop on 24/10/2017 -->
+    <!-- following the w3schools.com tutorial -->
+</head>
+<body>
+
+<div id="demo">
+    <h2>Let AJAX change this text</h2>
+    <button type="button" onclick="loadDoc()">Change content</button>
+</div>
+
+<script>
+    // The keystone to AJAX is the XMLHttpRequest object, so let's make one!
+    var xhttp = new XMLHttpRequest();
+
+    // Sending a request to a server [open(method, url, async)
+    // Method - either a GET or POST, a lot like an API
+    // url - the server (file) location
+    // async - either true or false on synchronous
+    xhttp.open("GET", "ajax.info.txt", true);
+
+    //sending the request
+    xhttp.send();
+
+</script>
+</body>
+</html>
